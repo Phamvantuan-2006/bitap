@@ -1,0 +1,23 @@
+import math
+
+x = float(input("Nhap so do x cua goc (phut): "))
+
+# đổi sang độ
+degree = x / 60
+
+# xác định góc phần tư
+goc = degree % 360
+
+if 0 < goc < 90:
+    print("Thuoc goc vuong thu 1")
+elif 90 < goc < 180:
+    print("Thuoc goc vuong thu 2")
+elif 180 < goc < 270:
+    print("Thuoc goc vuong thu 3")
+elif 270 < goc < 360:
+    print("Thuoc goc vuong thu 4")
+
+# đổi sang radian
+rad = degree * math.pi / 180
+
+print("cos(x) =", math.cos(rad))
