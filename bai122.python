@@ -1,0 +1,16 @@
+s = input("Nhap chuoi nhi phan: ")
+
+print("Tri thap phan:", int(s, 2))
+s = input("Nhap chuoi nhi phan: ")
+ket_qua = 0
+for bit in s:
+    ket_qua = ket_qua * 2 + int(bit)
+
+print("Tri thap phan:", ket_qua)
+def nhi_phan_sang_thap_phan(s):
+    if s == "":
+        return 0
+    return nhi_phan_sang_thap_phan(s[:-1]) * 2 + int(s[-1])
+
+s = input("Nhap chuoi nhi phan: ")
+print("Tri thap phan:", nhi_phan_sang_thap_phan(s))
